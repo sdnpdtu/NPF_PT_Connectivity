@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true" name="eu.ngpaas.conn.core.ConnectivityManager" activate="activate" deactivate="deactivate">
-    <implementation class="eu.ngpaas.conn.core.ConnectivityManager"/>
-    <service servicefactory="false">
-        <provide interface="eu.ngpaas.pmLib.PolicyService"/>
-    </service>
-    <property name="service.pid" value="eu.ngpaas.conn.core.ConnectivityManager"/>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" immediate="true"
+               name="eu.ngpaas.conn.core.ConnectivityManager" activate="activate" deactivate="deactivate">
+  <implementation class="eu.ngpaas.conn.core.ConnectivityManager"/>
+  <service servicefactory="false">
+    <provide interface="eu.ngpaas.pmLib.PolicyService"/>
+  </service>
+  <property name="service.pid" value="eu.ngpaas.conn.core.ConnectivityManager"/>
 </scr:component>

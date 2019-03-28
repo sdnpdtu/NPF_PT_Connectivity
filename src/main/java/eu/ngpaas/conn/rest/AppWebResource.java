@@ -15,18 +15,21 @@
  */
 package eu.ngpaas.conn.rest;
 
+import javax.ws.rs.Consumes;
+import javax.ws.rs.POST;
+import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
+
 import eu.ngpaas.conn.core.ConnectivityManager;
-import eu.ngpaas.pmLib.PolicyRule;
-import eu.ngpaas.pmLib.PolicyService;
-import eu.ngpaas.pmLib.SimpleResponse;
+import eu.ngpaas.pmlib.PolicyHelper;
+import eu.ngpaas.pmlib.PolicyRule;
+import eu.ngpaas.pmlib.PolicyService;
+import eu.ngpaas.pmlib.SimpleResponse;
 import org.onosproject.rest.AbstractWebResource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import eu.ngpaas.pmLib.PolicyHelper;
 
 /**
  * Sample web resource.
@@ -45,9 +48,10 @@ public class AppWebResource extends AbstractWebResource {
         PolicyRule policyRule = PolicyHelper.parsePolicyRule(body);
         SimpleResponse sr = connectivityService.formalValidation(policyRule);
         return ok(sr.getMessage()).
-                status(sr.getCode()).
-                build();
+                                      status(sr.getCode()).
+                                      build();
     }
+
     @POST
     @Path("contextvalidation")
     @Produces(MediaType.APPLICATION_JSON)
@@ -56,8 +60,8 @@ public class AppWebResource extends AbstractWebResource {
         PolicyRule policyRule = PolicyHelper.parsePolicyRule(body);
         SimpleResponse sr = connectivityService.contextValidation(policyRule);
         return ok(sr.getMessage()).
-                status(sr.getCode()).
-                build();
+                                      status(sr.getCode()).
+                                      build();
     }
 
     @POST
