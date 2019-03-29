@@ -15,9 +15,9 @@
   ~ limitations under the License.
   -->
 <app name="eu.ngpaas.conn" origin="ngpaas" version="1.0-SNAPSHOT"
-     title="Connectivity Policy Manager" category="default" url="http://ngpaas.eu"
-     featuresRepo="mvn:eu.ngpaas/ngpaas-connectivitypolicy/1.0-SNAPSHOT/xml/features"
-     features="ngpaas-connectivitypolicy" apps="">
-  <description>ONOS OSGi bundle archetype.</description>
-  <artifact>mvn:eu.ngpaas/ngpaas-connectivitypolicy/1.0-SNAPSHOT</artifact>
+        title="Connectivity Policy Manager" category="default" url="http://ngpaas.eu"
+        featuresRepo="mvn:eu.ngpaas/ngpaas-connectivitypolicy/1.0-SNAPSHOT/xml/features"
+        features="ngpaas-connectivitypolicy" apps="">
+    <description>ONOS OSGi bundle archetype.</description>
+    <artifact>mvn:eu.ngpaas/ngpaas-connectivitypolicy/1.0-SNAPSHOT</artifact>
 </app>

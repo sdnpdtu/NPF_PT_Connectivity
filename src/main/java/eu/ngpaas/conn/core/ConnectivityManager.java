@@ -23,7 +23,9 @@ import eu.ngpaas.pmlib.PolicyRules;
 import eu.ngpaas.pmlib.PolicyService;
 import eu.ngpaas.pmlib.SimpleResponse;
 import org.apache.felix.scr.annotations.Activate;
+import org.apache.felix.scr.annotations.Component;
 import org.apache.felix.scr.annotations.Deactivate;
+import org.apache.felix.scr.annotations.Service;
 import org.glassfish.jersey.client.ClientConfig;
 import org.glassfish.jersey.client.authentication.HttpAuthenticationFeature;
 import org.onlab.osgi.DefaultServiceDirectory;
@@ -43,6 +45,8 @@ import org.onosproject.net.intent.Key;
 import org.slf4j.Logger;
 
 
+@Component(immediate = true)
+@Service
 public class ConnectivityManager implements PolicyService {
     private final Logger log = getLogger(getClass());
     //Instantiate the required services
